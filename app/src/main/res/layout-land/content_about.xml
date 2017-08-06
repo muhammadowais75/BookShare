@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/dimension"
+    android:paddingLeft="@dimen/dimension"
+    android:paddingRight="@dimen/dimension"
+    android:paddingTop="@dimen/dimension"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.moandroidapps.bookshare.catalog.AboutActivity"
+    tools:showIn="@layout/activity_about">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/image_side"
+        android:layout_height="@dimen/image_side"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/about_headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/imageView"
+        android:layout_toRightOf="@id/imageView"
+        android:text="@string/about_headline"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/about_headline"
+        android:layout_alignLeft="@+id/about_headline"
+        android:layout_alignStart="@+id/about_headline">
+
+        <TextView
+            android:id="@+id/about_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about_text" />
+
+    </ScrollView>
+
+
+</RelativeLayout>

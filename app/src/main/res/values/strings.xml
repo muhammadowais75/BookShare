@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BookShare</string>
+    <string name="action_settings">Settings</string>
+    <string name="about">About</string>
+    <string name="help">Help</string>
+    <string name="share">Share</string>
+    <string name="title_activity_about">About</string>
+    <string name="about_text">Alexander’s military genius is undisputed. He improved the fine army inherited from his father, Philip, by the addition of allied forces; he strengthened the cavalry arm, utilized weapons specialists, and employed a corps of engineers; he was invincible in both siege warfare and set battles. His movements were marked by speed; his logistical, intelligence, and communications operations were flawless; and his ability to improvise was unrivaled. Yet he was careful in strategy: rather than strike deep into Asia immediately, he spent nearly two years securing the coastal areas of Asia Minor and the Levant in order to ensure that Persian naval forces would not interdict his lines to Europe. Bit by bit he wore away the western sections of the Persian Empire before driving into Mesopotamia and the Iranian plateau. Only three setbacks checked his progress. Along the Indian frontier his officers refused to march farther east, and, after his return to Babylonia, his Macedonian troops mutinied against the integration of Asian troops into the ranks. The third episode was the horrible loss of personnel in the Makran desert on the return march from India to the Persian Gulf, where lack of water and food accomplished what no enemy army had been able to do.</string>
+    <string name="about_headline">Book Sharing</string>
+    <string name="on_the_web">On the Web</string>
+</resources>
