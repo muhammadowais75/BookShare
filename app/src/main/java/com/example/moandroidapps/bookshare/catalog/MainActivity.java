@@ -5,6 +5,7 @@ import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     private static String webURL = "https://www.nu.edu.pk/";
     private static String email1 = "rana.owais.aslam@gmail.com";
     private static String email2 = "L124129@lhr.nu.edu.pk";
+
+    private List<Product> products = DataProvider.productList;
 
 
     @Override
@@ -80,13 +84,17 @@ public class MainActivity extends AppCompatActivity {
 
         //2. Create the Adapter:
         //Binding data to the list
-        ArrayAdapter<String> adapter =
+        /*ArrayAdapter<String> adapter =
                 new ArrayAdapter<>(this,
                         android.R.layout.simple_list_item_1,
-                        android.R.id.text1, items);//new ArrayAdapter(Context,
+                        android.R.id.text1, items)*/;//new ArrayAdapter(Context,
         // Resource identifier for a layout file(Not created by us. Already included with SDK) It contains single text component,
         // ID of textView that will display my string for a single row,
         // objects, which we want to display. It can either be a simple array of strings or a complex list of strings)
+
+        //For Customized List
+        ProductListAdapter adapter = new ProductListAdapter
+                (this, R.layout.list_item, products);
 
         //Now the adapter knows, what data it is using, it knows which layout it is using for each
         //row in the list and what id of the textView to display strings
@@ -99,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
         //Binding everything together
         lv.setAdapter(adapter);
 
-/*        ImageView iv = (ImageView) findViewById(R.id.dummy_image);
+        /*ImageView iv = (ImageView) findViewById(R.id.dummy_image);
         String imageName = "another_image";
 
         try {
@@ -109,11 +117,6 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }*/
-
-
-
-
-
 
         Log.d(LOG_CAT, "onCreate");
     }//end MainActivity
