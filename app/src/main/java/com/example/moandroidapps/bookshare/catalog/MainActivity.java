@@ -67,15 +67,36 @@ public class MainActivity extends AppCompatActivity {
 
 
         /*Getting data from the resource file and passing it to listView*/
+        /*Four Steps:
+        * 1. Get the Data
+        * 2. Create the Adapter
+        * 3. Get the reference to the listView
+        * 4. Connect the adapter to the listView*/
+
+
+        //1. Get the Data:
         //Retrieving data from the resource file
         String[] items = getResources().getStringArray(R.array.clothing);
+
+        //2. Create the Adapter:
         //Binding data to the list
         ArrayAdapter<String> adapter =
-                new ArrayAdapter<String>(this,
+                new ArrayAdapter<>(this,
                         android.R.layout.simple_list_item_1,
-                        android.R.id.text1, items);
+                        android.R.id.text1, items);//new ArrayAdapter(Context,
+        // Resource identifier for a layout file(Not created by us. Already included with SDK) It contains single text component,
+        // ID of textView that will display my string for a single row,
+        // objects, which we want to display. It can either be a simple array of strings or a complex list of strings)
 
+        //Now the adapter knows, what data it is using, it knows which layout it is using for each
+        //row in the list and what id of the textView to display strings
+
+        //3. Get reference to the listView:
+        //Getting reference of a listView component. Which is a part of the layout.
         ListView lv = (ListView) findViewById(R.id.listView);
+
+        //4. Connect the adapter to the listView:
+        //Binding everything together
         lv.setAdapter(adapter);
 
 /*        ImageView iv = (ImageView) findViewById(R.id.dummy_image);
