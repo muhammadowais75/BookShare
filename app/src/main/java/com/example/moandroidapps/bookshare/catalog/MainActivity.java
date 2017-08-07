@@ -14,7 +14,9 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import java.io.IOException;
@@ -63,7 +65,20 @@ public class MainActivity extends AppCompatActivity {
             }//end onClick
         });
 
-        ImageView iv = (ImageView) findViewById(R.id.dummy_image);
+
+        /*Getting data from the resource file and passing it to listView*/
+        //Retrieving data from the resource file
+        String[] items = getResources().getStringArray(R.array.clothing);
+        //Binding data to the list
+        ArrayAdapter<String> adapter =
+                new ArrayAdapter<String>(this,
+                        android.R.layout.simple_list_item_1,
+                        android.R.id.text1, items);
+
+        ListView lv = (ListView) findViewById(R.id.listView);
+        lv.setAdapter(adapter);
+
+/*        ImageView iv = (ImageView) findViewById(R.id.dummy_image);
         String imageName = "another_image";
 
         try {
@@ -72,7 +87,12 @@ public class MainActivity extends AppCompatActivity {
             iv.setImageDrawable(d);
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
+
+
+
+
+
 
         Log.d(LOG_CAT, "onCreate");
     }//end MainActivity

@@ -6,4 +6,5 @@
     <dimen name="content_size">14sp</dimen>
     <dimen name="about_headline_textsize_landscape">48sp</dimen>
     <dimen name="about_text_textsize_landscape">24sp</dimen>
+    <dimen name="padding_value">16dp</dimen>
 </resources>

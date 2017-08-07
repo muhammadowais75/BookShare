@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Declaring a String array-->
+    <!--String Array: A collection of String values. It stores data in a fixed order.-->
+    <!--Great way to provide small amount of data to an application, where data is not dynamic-->
+    
+    <string-array name="clothing">
+        <item>History</item>
+        <item>Computer Science</item>
+        <item>English</item>
+        <item>Mathematics</item>
+        <item>Urdu</item>
+        <item>Physics</item>
+        <item>Chemistry</item>
+        <item>Fiction</item>
+        <item>Drama</item>
+        <item>Influential</item>
+        <item>Motivational</item>
+        <item>Articles</item>
+        <item>Blogs</item>
+        <item>Quotations</item>
+    </string-array>
+
+</resources>
